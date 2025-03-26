@@ -29,8 +29,8 @@ const client = new Client({
 
 // Database
 const db = {
-  tiers: quickdb.table('tiers'),
-  payments: quickdb.table('payments'),
+ tiers: new quickdb.QuickDB().table('tiers'),
+ payments: new quickdb.QuickDB().table('payments'),
   quotes: quickdb.table('quotes'),
   settings: quickdb.table('settings')
 };
