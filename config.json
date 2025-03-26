@@ -1,0 +1,9 @@
+{
+  "adminRole": "Admin",
+  "paymentCooldown": 15,
+  "wallets": {
+    "ETH": "0xYOUR_ETH_ADDRESS",
+    "SOL": "YOUR_SOL_ADDRESS",
+    "USDT": "YOUR_USDT_TRC20_ADDRESS"
+  }
+}
