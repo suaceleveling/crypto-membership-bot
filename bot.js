@@ -14,7 +14,7 @@ require('dotenv').config();
 const { Client, IntentsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
 const QRCode = require('qrcode');
 const axios = require('axios');
-const quickdb = require('quick.db');
+const { QuickDB } = require("quick.db");
 const cron = require('node-cron');
 
 // Initialize
@@ -28,11 +28,12 @@ const client = new Client({
 });
 
 // Database
+// Replace ALL database-related code with this:
 const db = {
- tiers: new quickdb.QuickDB().table('tiers'),
- payments: new quickdb.QuickDB().table('payments'),
-  quotes: quickdb.table('quotes'),
-  settings: quickdb.table('settings')
+  tiers: new QuickDB().table("tiers"),
+  payments: new QuickDB().table("payments"),
+  quotes: new QuickDB().table("quotes"),
+  settings: new QuickDB().table("settings")
 };
 
 // Config (EDIT THESE)
